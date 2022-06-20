@@ -1,11 +1,8 @@
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
 import React from 'react';
-import { Link } from 'react-router-dom';
-const Error = () => {
-  return (
-    <div>
-      <h1>Error Page</h1>
-    </div>
-  );
-};
+ const Error = ()=>{
+ return <div><h1>Error</h1></div>
 
-export default Error;
+ };
+ export default Error;
