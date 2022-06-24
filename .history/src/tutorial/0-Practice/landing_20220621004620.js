@@ -1,0 +1,31 @@
+import React, { useState, useEffect } from 'react';
+
+
+import BookCutOne from './bookCut.js';
+import BreakSection from './breakSection.js';
+import About from './about.js';
+import Services from './servicesAndProducts.js';
+import Contact from './contact.js';
+
+
+// second argument
+
+const Landing = () => {
+  
+  return (
+   
+      <main class="Site-content">
+        <BookCutOne />
+        <BreakSection title="ABOUT" />
+        <About />
+        <BreakSection title="SERVICES & PRODUCTS" />
+        <Services />
+        <BreakSection title="CONTACT US" />
+        <Contact />
+      </main>
+
+     
+  );
+};
+
+export default Landing;
