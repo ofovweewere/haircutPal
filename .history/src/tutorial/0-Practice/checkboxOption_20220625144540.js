@@ -1,4 +1,4 @@
-import React, { useState,useEffect, useContext}  from 'react';
+import React, { useState, useContext}  from 'react';
 import {BookingsContext} from './index.js';
 const CheckboxOption = ({title, description, cost, idd}) => {
   let {bookings,checked, itemSelection} = useContext(BookingsContext);
@@ -15,7 +15,7 @@ const CheckboxOption = ({title, description, cost, idd}) => {
       setDisplayVal('hidden')
     }
    
-  },[bookings[idd]]);
+  });
 
   return (
     <>
@@ -76,7 +76,7 @@ const CheckboxOption = ({title, description, cost, idd}) => {
                       </table>
                       <input
                         type="checkbox"
-                        onChange={() => itemSelection(idd,cost)}
+                        onChange={() => itemSelection(idd)}
                         disabled={bookings[idd]}
                         checked={checked[idd]}
                       />

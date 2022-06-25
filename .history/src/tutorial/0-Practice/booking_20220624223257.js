@@ -50,12 +50,12 @@ const Booking = () => {
               color="#427bd2"
               colorTwo="black"
             />
-            <CheckboxOption title="Regular Haircut" description="00:30" cost="25" idd='0' />
-            <CheckboxOption title="Beard Trim" description="00:15" cost="15" idd='1'  />
-            <CheckboxOption title="Haircut and Beard Trim" description="00:45" cost="35" idd='2' />
-            <CheckboxOption title="Kids Haircut" description="00:30" cost="20" idd='3' />
-            <CheckboxOption title="Buzz Cut" description="00:15" cost="18" idd='4' />
-            <CheckboxOption title="Sides and Back Haircut" description="00:15" cost="18" idd='5' />
+            <CheckboxOption title="Regular Haircut" description="00:30" cost="25" />
+            <CheckboxOption title="Beard Trim" description="00:15" cost="15" />
+            <CheckboxOption title="Haircut and Beard Trim" description="00:45" cost="35" />
+            <CheckboxOption title="Kids Haircut" description="00:30" cost="20" />
+            <CheckboxOption title="Buzz Cut" description="00:15" cost="18" />
+            <CheckboxOption title="Sides and Back Haircut" description="00:15" cost="18" />
             <Footing title="Subtotal" description="25" />
           </div>
 
@@ -80,22 +80,12 @@ const Booking = () => {
               color="#427bd2"
               colorTwo="black"
             />
-            <CheckboxOptionTwo title="Regular Haircut" description="00:30" cost="25" idd="0" />
-            <CheckboxOptionTwo title="Beard Trim" description="00:15" cost="15" idd="1" />
-            <CheckboxOptionTwo
-              title="Haircut and Beard Trim"
-              description="00:45"
-              cost="35"
-              idd="2"
-            />
-            <CheckboxOptionTwo title="Kids Haircut" description="00:30" cost="20" idd="3" />
-            <CheckboxOptionTwo title="Buzz Cut" description="00:15" cost="18" idd="4" />
-            <CheckboxOptionTwo
-              title="Sides and Back Haircut"
-              description="00:15"
-              cost="18"
-              idd="5"
-            />
+            <CheckboxOptionTwo title="Regular Haircut" description="00:30" cost="25" />
+            <CheckboxOptionTwo title="Beard Trim" description="00:15" cost="15" />
+            <CheckboxOptionTwo title="Haircut and Beard Trim" description="00:45" cost="35" />
+            <CheckboxOptionTwo title="Kids Haircut" description="00:30" cost="20" />
+            <CheckboxOptionTwo title="Buzz Cut" description="00:15" cost="18" />
+            <CheckboxOptionTwo title="Sides and Back Haircut" description="00:15" cost="18" />
             <Footing title="Subtotal" description="25" />
           </div>
 

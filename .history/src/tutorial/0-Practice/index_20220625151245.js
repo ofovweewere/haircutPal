@@ -26,7 +26,7 @@ const UseEffectFetchData = () => {
       else
       {
         arrChecked[id] = false;
-        costVal=0;
+
         
       }
     setBookings(arr);

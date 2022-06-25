@@ -253,14 +253,14 @@ p {
 .secondItem
 {
   color:#427bd2;
-  font-size:1rem;
+  font-size:1.2rem;
   font-weight:normal;
 }
 
 .exclamation
 {
   font-size:1.2rem;
-  color:#d22221; 
+  color:red; 
 }
 
 /**************************/

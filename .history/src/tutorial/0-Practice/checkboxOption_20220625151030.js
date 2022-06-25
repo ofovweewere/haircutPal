@@ -15,7 +15,7 @@ const CheckboxOption = ({title, description, cost, idd}) => {
       setDisplayVal('hidden')
     }
    
-  },[bookings[idd]]);
+  });
 
   return (
     <>

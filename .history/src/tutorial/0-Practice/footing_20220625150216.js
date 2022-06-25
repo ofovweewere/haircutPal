@@ -1,7 +1,7 @@
-import React, { useState,useEffect, useContext}  from 'react';
+import React from 'react';
 import {BookingsContext} from './index.js';
 const Footing = ({title, description}) => {
-   let {cost} = useContext(BookingsContext);
+
 
   return (
     <>
@@ -39,7 +39,7 @@ const Footing = ({title, description}) => {
                   <td>
                     <span style={{ display: 'flex' }}>
                       <span style={{ flexGrow: '1' }}>{title}</span>
-                      <span style={{ color: 'black' }}>$ {cost}</span>
+                      <span style={{ color: 'black' }}>$ {description}</span>
                     </span>
                   </td>
                 </tr>

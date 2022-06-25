@@ -1,6 +1,6 @@
 import React, { useState,useEffect, useContext}  from 'react';
 import {BookingsContext} from './index.js';
-const CheckboxOption = ({title, description, cost, idd}) => {
+const CheckboxOption = ({title, description, cost,idd}) => {
   let {bookings,checked, itemSelection} = useContext(BookingsContext);
   let [displayVal, setDisplayVal] = useState('hidden');
 
@@ -15,7 +15,7 @@ const CheckboxOption = ({title, description, cost, idd}) => {
       setDisplayVal('hidden')
     }
    
-  },[bookings[idd]]);
+  });
 
   return (
     <>
@@ -52,7 +52,7 @@ const CheckboxOption = ({title, description, cost, idd}) => {
               <tbody>
                 <tr style={{ color: '#427bd2', fontWeight: 'normal' }}>
                   <td>
-                    <label class="containers">
+                    <label class="containersTwo">
                       <table style={{ borderCollapse: 'collapse', width: '100%' }}>
                         <thead>
                           <tr>
@@ -62,25 +62,29 @@ const CheckboxOption = ({title, description, cost, idd}) => {
                         <tbody>
                           <tr>
                             <td>
-                              <span style={{ display: 'flex' }}>
-                                <span style={{ flexGrow: '1' }}>{title}</span>
-                                <span style={{ color: 'black' }}>$ {cost}</span>
+                              <span style={{ marginRight:'7rem' }}>
+                                <span >{title}</span>
+                              
                               </span>
                             </td>
                           </tr>
+
+                          <tr>
+                            <td>
+                              <span style={{ color: 'black' }}>$ {cost}</span>
+                            </td>
+                          </tr>
+
                           <tr class="smallText" style={{ color: 'black', fontWeight: '500' }}>
                             <td>Duration: {description}</td>
                           </tr>
-                          
                         </tbody>
                       </table>
-                      <input
-                        type="checkbox"
+                      <input  type="checkbox"
                         onChange={() => itemSelection(idd,cost)}
                         disabled={bookings[idd]}
-                        checked={checked[idd]}
-                      />
-                      <span class="checkmark"></span>
+                        checked={checked[idd]} />
+                      <span class="checkmarks"></span>
                     </label>
                   </td>
                 </tr>
@@ -92,17 +96,6 @@ const CheckboxOption = ({title, description, cost, idd}) => {
             </table>
             <p className='secondItem' style={{visibility:displayVal}}><span className='exclamation'><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span> You can select up to 1 item</p>
           </div>
-          {/* <div style={{color:'#427bd2',fontWeight:'normal'}} >
-             <label class="containers">
-                {title}
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-            </label>
-            </div>
-            <div class='smallText'style={{color:'black', fontWeight:'normal'}}>
-                Duration: {description}
-            </div> */}
-
         </div>
       </div>
     </>

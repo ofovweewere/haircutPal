@@ -1,21 +1,7 @@
-import React, { useState,useEffect, useContext}  from 'react';
+import React, { useContext}  from 'react';
 import {BookingsContext} from './index.js';
 const CheckboxOption = ({title, description, cost, idd}) => {
   let {bookings,checked, itemSelection} = useContext(BookingsContext);
-  let [displayVal, setDisplayVal] = useState('hidden');
-
-  useEffect(() => {
-   
-    if(bookings[idd] === true)
-    {
-      setDisplayVal('visible');
-    }
-    else
-    {
-      setDisplayVal('hidden')
-    }
-   
-  },[bookings[idd]]);
 
   return (
     <>
@@ -71,12 +57,14 @@ const CheckboxOption = ({title, description, cost, idd}) => {
                           <tr class="smallText" style={{ color: 'black', fontWeight: '500' }}>
                             <td>Duration: {description}</td>
                           </tr>
-                          
+                          <tr class="smallText" style={{ display: 'flex', justifyContent:'end', color: 'black', fontWeight: '500' }}>
+                            <td>Duration: {description}</td>
+                          </tr>
                         </tbody>
                       </table>
                       <input
                         type="checkbox"
-                        onChange={() => itemSelection(idd,cost)}
+                        onChange={() => itemSelection(idd)}
                         disabled={bookings[idd]}
                         checked={checked[idd]}
                       />
@@ -90,7 +78,6 @@ const CheckboxOption = ({title, description, cost, idd}) => {
                 </tr> */}
               </tbody>
             </table>
-            <p className='secondItem' style={{visibility:displayVal}}><span className='exclamation'><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span> You can select up to 1 item</p>
           </div>
           {/* <div style={{color:'#427bd2',fontWeight:'normal'}} >
              <label class="containers">
@@ -102,7 +89,6 @@ const CheckboxOption = ({title, description, cost, idd}) => {
             <div class='smallText'style={{color:'black', fontWeight:'normal'}}>
                 Duration: {description}
             </div> */}
-
         </div>
       </div>
     </>

@@ -26,7 +26,7 @@ const UseEffectFetchData = () => {
       else
       {
         arrChecked[id] = false;
-        costVal=0;
+
         
       }
     setBookings(arr);
@@ -34,7 +34,10 @@ const UseEffectFetchData = () => {
     setCost(costVal);
   }
 
-  
+  const setDetails = (costVal)=>{
+   
+    
+  }
 
   return <BookingsContext.Provider value={{bookings,checked,cost,itemSelection} }> 
     <body className="Site" style={{backgroundColor:'black'}}>

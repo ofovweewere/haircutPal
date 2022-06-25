@@ -7,7 +7,7 @@ import CheckboxOptionTwo from './checkboxOptionTwo.js';
 import Footing from './footing.js';
 import BlueButton from './blueButton.js';
 const Booking = () => {
-
+ let {itemSelection} = useContext(bookingsContext);
   const [screenSize, setClass] = useState(
     window.innerWidth < 992
       ? 'small'

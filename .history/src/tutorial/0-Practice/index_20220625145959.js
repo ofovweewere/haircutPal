@@ -12,7 +12,7 @@ const UseEffectFetchData = () => {
   const [bookings, setBookings] = useState([false,false,false,false,false,false]);
   const [checked, setChecked] = useState([false,false,false,false,false,false]);
   const [cost, setCost] = useState(0);
-   const itemSelection = (id,costVal)=>{
+   const itemSelection = (id)=>{
    
     let arr = [false,false,false,false,false,false];
     let arrChecked = [false,false,false,false,false,false];
@@ -26,17 +26,13 @@ const UseEffectFetchData = () => {
       else
       {
         arrChecked[id] = false;
-        costVal=0;
+
         
       }
     setBookings(arr);
     setChecked(arrChecked);
-    setCost(costVal);
   }
-
-  
-
-  return <BookingsContext.Provider value={{bookings,checked,cost,itemSelection} }> 
+  return <BookingsContext.Provider value={{bookings,checked,itemSelection} }> 
     <body className="Site" style={{backgroundColor:'black'}}>
       
       <Router>

@@ -39,7 +39,7 @@ const Footing = ({title, description}) => {
                   <td>
                     <span style={{ display: 'flex' }}>
                       <span style={{ flexGrow: '1' }}>{title}</span>
-                      <span style={{ color: 'black' }}>$ {cost}</span>
+                      <span style={{ color: 'black' }}>$ {description}</span>
                     </span>
                   </td>
                 </tr>

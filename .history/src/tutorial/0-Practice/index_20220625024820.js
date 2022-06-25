@@ -10,33 +10,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 export const BookingsContext = React.createContext();
 const UseEffectFetchData = () => {
   const [bookings, setBookings] = useState([false,false,false,false,false,false]);
-  const [checked, setChecked] = useState([false,false,false,false,false,false]);
-  const [cost, setCost] = useState(0);
-   const itemSelection = (id,costVal)=>{
-   
-    let arr = [false,false,false,false,false,false];
-    let arrChecked = [false,false,false,false,false,false];
-      if(checked[id] === false)
-      {
-         arr = [true, true, true, true, true, true];
-         arr[id] = false;
-          arrChecked = [false,false,false,false,false,false];
-          arrChecked[id] = true;
-      }
-      else
-      {
-        arrChecked[id] = false;
-        costVal=0;
-        
-      }
+   const itemSelection = (id)=>{
+    console.log(id);
+    let arr = [true,true,true,true,true,true];
+
+    arr[id] = false;
     setBookings(arr);
-    setChecked(arrChecked);
-    setCost(costVal);
   }
-
-  
-
-  return <BookingsContext.Provider value={{bookings,checked,cost,itemSelection} }> 
+  return <BookingsContext.Provider value={{itemSelection} }> 
     <body className="Site" style={{backgroundColor:'black'}}>
       
       <Router>

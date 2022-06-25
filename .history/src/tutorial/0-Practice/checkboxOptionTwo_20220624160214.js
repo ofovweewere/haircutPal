@@ -1,21 +1,7 @@
-import React, { useState,useEffect, useContext}  from 'react';
-import {BookingsContext} from './index.js';
-const CheckboxOption = ({title, description, cost, idd}) => {
-  let {bookings,checked, itemSelection} = useContext(BookingsContext);
-  let [displayVal, setDisplayVal] = useState('hidden');
+import React from 'react';
 
-  useEffect(() => {
-   
-    if(bookings[idd] === true)
-    {
-      setDisplayVal('visible');
-    }
-    else
-    {
-      setDisplayVal('hidden')
-    }
-   
-  },[bookings[idd]]);
+const CheckboxOption = ({title, description, cost}) => {
+
 
   return (
     <>
@@ -39,7 +25,7 @@ const CheckboxOption = ({title, description, cost, idd}) => {
             flexDirection: 'column',
             background: '#fff',
             paddingTop: '0',
-            paddingBottom: '0',
+            paddingBottom:'0'
           }}
         >
           <div className="whiteParagraph">
@@ -71,16 +57,10 @@ const CheckboxOption = ({title, description, cost, idd}) => {
                           <tr class="smallText" style={{ color: 'black', fontWeight: '500' }}>
                             <td>Duration: {description}</td>
                           </tr>
-                          
                         </tbody>
                       </table>
-                      <input
-                        type="checkbox"
-                        onChange={() => itemSelection(idd,cost)}
-                        disabled={bookings[idd]}
-                        checked={checked[idd]}
-                      />
-                      <span class="checkmark"></span>
+                      <input type="checkbox" />
+                      <span class="checkmark" style={{left:'',right:'0'}}></span>
                     </label>
                   </td>
                 </tr>
@@ -90,19 +70,8 @@ const CheckboxOption = ({title, description, cost, idd}) => {
                 </tr> */}
               </tbody>
             </table>
-            <p className='secondItem' style={{visibility:displayVal}}><span className='exclamation'><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span> You can select up to 1 item</p>
           </div>
-          {/* <div style={{color:'#427bd2',fontWeight:'normal'}} >
-             <label class="containers">
-                {title}
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-            </label>
-            </div>
-            <div class='smallText'style={{color:'black', fontWeight:'normal'}}>
-                Duration: {description}
-            </div> */}
-
+          
         </div>
       </div>
     </>
